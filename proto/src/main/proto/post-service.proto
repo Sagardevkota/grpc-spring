@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package com.sagardev.posts;
+option java_multiple_files = true;
+option java_package = "com.sagardev.posts";
+
+message Post{
+  int32 postId = 1;
+  string postName = 2;
+  string postPicture = 3;
+}
+
+message PostRequest{
+  int32 page = 1;
+}
+
+message PostResponse{
+
+  repeated Post posts = 1;
+}
+
+service PostService{
+
+  rpc getPosts(PostRequest) returns(PostResponse);
+}

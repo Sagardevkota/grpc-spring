@@ -1,0 +1,3 @@
+# Project exclude paths
+/post-service/target/
+/proto/target/
